@@ -1,0 +1,111 @@
+Je vous demande de créer une application web interactive sur Replit appelée 'Magyar Quiz', conçue pour aider les utilisateurs à se préparer à l'examen de connaissances culturelles hongroises (Magyar Kulturális Ismereti Vizsga). L'application doit être basée sur le Product Requirements Document (PRD) suivant et implémentée en utilisant Python avec Flask pour le backend et HTML/CSS/JavaScript pour le frontend. Voici les détails :
+Objectif
+Créer une application de quiz avec 6 quiz thématiques, chacun contenant 5 questions à choix multiples en hongrois, couvrant les thèmes suivants :  
+Symboles nationaux et fêtes  
+
+Événements historiques majeurs  
+
+Littérature et musique  
+
+Institutions constitutionnelles  
+
+Droits et devoirs des citoyens  
+
+Questions mixtes
+Fonctionnalités principales
+Structure des quiz :  
+6 quiz, 5 questions chacun, 2,5 points par bonne réponse (total 12,5 points par quiz, 75 points pour l'ensemble).  
+
+Questions en hongrois avec 3 options (A, B, C).  
+
+Exemple :  
+Question : 'Mi a magyar zászló három színe?'  
+
+Options : A) Kék, fehér, zöld ; B) Piros, fehér, zöld ; C) Sárga, kék, piros  
+
+Réponse correcte : B) Piros, fehér, zöld
+À la fin de chaque quiz, afficher le score et les réponses correctes avec une courte explication.
+Interface utilisateur :  
+Page d'accueil : Titre 'Magyar Quiz - Préparez-vous à l'examen culturel hongrois', liste des 6 quiz avec boutons, bouton 'Score total'.  
+
+Page de quiz : Instructions, une question à la fois avec options sous forme de boutons radio, bouton 'Suivant', affichage du score et des explications à la fin.  
+
+Bouton 'Retour à l'accueil' sur chaque page.
+Gestion des données :  
+Stocker les questions dans un fichier JSON (ou un tableau Python). Exemple de structure :  
+json
+{
+  "theme": "Nemzeti jelképek és ünnepek",
+  "question": "Mi a magyar zászló három színe?",
+  "options": ["Kék, fehér, zöld", "Piros, fehér, zöld", "Sárga, kék, piros"],
+  "correct_answer": "Piros, fehér, zöld",
+  "explanation": "A magyar zászló színei piros, fehér és zöld."
+}
+Suivi des scores dans une variable de session Flask.
+Fonctionnalités bonus (optionnel) :  
+Mélanger l'ordre des questions.  
+
+Ajouter un minuteur de 5 minutes par quiz.
+Exigences techniques
+Langage : Python avec Flask pour le serveur, HTML/CSS pour l'interface, JavaScript pour l'interactivité.  
+
+Plateforme : Replit (déployer l'application avec un lien public).  
+
+Structure des fichiers :  
+main.py : Logique Flask et routes.  
+
+templates/index.html : Page d'accueil.  
+
+templates/quiz.html : Page des quiz.  
+
+static/style.css : Styles de base.  
+
+questions.json : Données des quiz.
+Instructions spécifiques
+Implémentez au moins 2 quiz complets (10 questions) pour démontrer la fonctionnalité (ex. : 'Symboles nationaux et fêtes' et 'Événements historiques majeurs'). Les autres peuvent être ajoutés comme données fictives.  
+
+Assurez-vous que l'application calcule et affiche les scores correctement.  
+
+Fournissez un design minimaliste (ex. : fond blanc, texte noir, boutons clairs).  
+
+Déployez l'application sur Replit et fournissez le lien dans votre réponse.
+Exemple de flux utilisateur
+L'utilisateur ouvre l'application et voit la page d'accueil avec les 6 quiz.  
+
+Il clique sur 'Nemzeti jelképek és ünnepek'.  
+
+Il répond à 5 questions, clique sur 'Suivant' après chaque réponse.  
+
+À la fin, il voit 'Eredmény: 10/12,5 pont' avec les réponses correctes et explications.  
+
+Il clique sur 'Retour à l'accueil' pour choisir un autre quiz.
+Contenu des quiz
+Utilisez les questions suivantes pour les 2 quiz minimum :
+Quiz 1 : Nemzeti jelképek és ünnepek  
+Mi a magyar zászló három színe? (A: Kék, fehér, zöld; B: Piros, fehér, zöld; C: Sárga, kék, piros) → B  
+
+Melyik a magyar nemzeti himnusz címe? (A: Szózat; B: Himnusz; C: Magyar Dal) → B  
+
+Melyik ünnep kapcsolódik Szent István királyhoz? (A: Március 15.; B: Augusztus 20.; C: Október 23.) → B  
+
+Mi a magyar címer egyik fontos eleme? (A: Korona; B: Sas; C: Nap) → A  
+
+Melyik nemzeti ünnep emlékezik az 1956-os forradalomra? (A: Március 15.; B: Augusztus 20.; C: Október 23.) → C
+Quiz 2 : Történelmi események  
+Mikor alapították a magyar államot? (A: 896; B: 1000; C: 1526) → B  
+
+Melyik esemény zárta le az 1848-49-es forradalmat és szabadságharcot? (A: A mohácsi csata; B: A világosi fegyverletétel; C: A trianoni békeszerződés) → B  
+
+Mikor írták alá a trianoni békeszerződést? (A: 1918; B: 1920; C: 1945) → B  
+
+Melyik évben zajlott az 1956-os magyar forradalom? (A: 1945; B: 1956; C: 1989) → B  
+
+Melyik évben történt a magyar rendszerváltás? (A: 1985; B: 1990; C: 1995) → B
+Livrables attendus
+Code complet sur Replit (fichiers mentionnés ci-dessus).  
+
+Lien public vers l'application fonctionnelle.  
+
+Instructions dans un README pour lancer l'application.
+Commencez par configurer Flask sur Replit, créez les fichiers nécessaires, et implémentez les fonctionnalités étape par étape. Si vous avez des questions ou besoin de clarification, demandez-moi !
+
