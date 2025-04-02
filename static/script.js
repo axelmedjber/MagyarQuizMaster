@@ -46,15 +46,21 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Show a specific question
     function showQuestion(index) {
-        questionContainers.forEach((container, i) => {
-            if (i === index) {
-                container.classList.remove('hidden');
-                container.classList.add('fade-in');
-            } else {
-                container.classList.add('hidden');
-                container.classList.remove('fade-in');
-            }
+        // Ensure valid index
+        if (index < 0 || index >= questionContainers.length) {
+            console.error("Invalid question index:", index);
+            return;
+        }
+        
+        // Hide all questions first
+        questionContainers.forEach(container => {
+            container.classList.add('hidden');
+            container.classList.remove('fade-in');
         });
+        
+        // Show the current question
+        questionContainers[index].classList.remove('hidden');
+        questionContainers[index].classList.add('fade-in');
         
         // Update progress bar
         if (progressBar) {
@@ -63,36 +69,35 @@ document.addEventListener('DOMContentLoaded', function() {
             progressBar.setAttribute('aria-valuenow', progressPercentage);
         }
         
-        // Show/hide navigation buttons based on current question
-        if (nextButtons.length > 0) {
-            nextButtons.forEach(btn => {
-                if (parseInt(btn.dataset.questionIndex) === index && 
-                    index < questionContainers.length - 1) {
-                    btn.classList.remove('hidden');
-                } else {
-                    btn.classList.add('hidden');
-                }
-            });
-        }
+        // Hide all navigation buttons first
+        nextButtons.forEach(btn => btn.classList.add('hidden'));
+        prevButtons.forEach(btn => btn.classList.add('hidden'));
         
-        if (prevButtons.length > 0) {
-            prevButtons.forEach(btn => {
-                if (parseInt(btn.dataset.questionIndex) === index && index > 0) {
-                    btn.classList.remove('hidden');
-                } else {
-                    btn.classList.add('hidden');
-                }
-            });
-        }
+        // Show appropriate navigation buttons for current question
+        nextButtons.forEach(btn => {
+            if (parseInt(btn.dataset.questionIndex) === index && 
+                index < questionContainers.length - 1) {
+                btn.classList.remove('hidden');
+            }
+        });
         
-        // Show submit button on last question
+        prevButtons.forEach(btn => {
+            if (parseInt(btn.dataset.questionIndex) === index && index > 0) {
+                btn.classList.remove('hidden');
+            }
+        });
+        
+        // Show/hide submit button based on whether we're on the last question
         if (submitButton) {
             if (index === questionContainers.length - 1) {
+                console.log("Showing submit button on last question");
                 submitButton.classList.remove('hidden');
             } else {
                 submitButton.classList.add('hidden');
             }
         }
+        
+        console.log(`Showing question ${index + 1}/${questionContainers.length}`);
     }
     
     // Initialize quiz if questions exist
