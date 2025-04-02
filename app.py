@@ -57,9 +57,14 @@ def quiz(quiz_name):
         'questions': quiz_questions
     }
     
+    # Get theme in French if available
+    theme_fr = quiz_questions[0]['theme_fr'] if quiz_questions and 'theme_fr' in quiz_questions[0] else quiz_name
+    
     return render_template('quiz.html', 
                            quiz_name=quiz_name, 
-                           questions=quiz_questions)
+                           quiz_name_fr=theme_fr,
+                           questions=quiz_questions,
+                           language='fr')
 
 @app.route('/submit_quiz', methods=['POST'])
 def submit_quiz():
@@ -77,16 +82,28 @@ def submit_quiz():
         answer_key = f'question_{i}'
         user_answer = request.form.get(answer_key, '')
         
-        # Record user's answers for display
-        correct = user_answer == question['correct_answer']
-        user_answers.append({
+        # Check if the answer is in French or Hungarian
+        correct = False
+        if 'correct_answer_fr' in question and user_answer == question['correct_answer_fr']:
+            correct = True
+        elif user_answer == question['correct_answer']:
+            correct = True
+        
+        # Prepare answer data with both languages if available
+        answer_data = {
             'question': question['question'],
+            'question_fr': question.get('question_fr', question['question']),
             'user_answer': user_answer,
             'correct_answer': question['correct_answer'],
+            'correct_answer_fr': question.get('correct_answer_fr', question['correct_answer']),
             'explanation': question['explanation'],
+            'explanation_fr': question.get('explanation_fr', question['explanation']),
             'correct': correct,
-            'options': question['options']
-        })
+            'options': question['options'],
+            'options_fr': question.get('options_fr', question['options'])
+        }
+        
+        user_answers.append(answer_data)
         
         # Add points for correct answers
         if correct:
@@ -98,12 +115,17 @@ def submit_quiz():
         session['completed'].append(quiz_name)
     session.modified = True
     
+    # Get theme in French if available
+    theme_fr = questions[0]['theme_fr'] if questions and 'theme_fr' in questions[0] else quiz_name
+    
     # Prepare result data
     result_data = {
         'quiz_name': quiz_name,
+        'quiz_name_fr': theme_fr,
         'score': score,
         'max_score': len(questions) * 2.5,
-        'answers': user_answers
+        'answers': user_answers,
+        'language': 'fr'
     }
     
     return render_template('result.html', result=result_data)

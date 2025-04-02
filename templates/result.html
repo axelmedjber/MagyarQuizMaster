@@ -1,17 +1,17 @@
 {% extends 'layout.html' %}
 
-{% block title %}Résultats - {{ result.quiz_name }}{% endblock %}
+{% block title %}Résultats - {{ result.quiz_name_fr if result.language == 'fr' else result.quiz_name }}{% endblock %}
 
 {% block content %}
 <div class="row py-4">
     <div class="col-md-8 mx-auto">
         <div class="card mb-4">
             <div class="card-header">
-                <h2 class="mb-0">{{ result.quiz_name }} - Résultats</h2>
+                <h2 class="mb-0">{{ result.quiz_name_fr if result.language == 'fr' else result.quiz_name }} - Résultats</h2>
             </div>
             <div class="card-body">
                 <div class="score-display">
-                    <h3>Eredmény: <span class="{% if result.score >= result.max_score * 0.7 %}text-success{% elif result.score >= result.max_score * 0.4 %}text-warning{% else %}text-danger{% endif %}">{{ result.score }}/{{ result.max_score }}</span> pont</h3>
+                    <h3>Résultat : <span class="{% if result.score >= result.max_score * 0.7 %}text-success{% elif result.score >= result.max_score * 0.4 %}text-warning{% else %}text-danger{% endif %}">{{ result.score }}/{{ result.max_score }}</span> points</h3>
                     
                     {% set percentage = (result.score / result.max_score) * 100 %}
                     <div class="progress mt-3 mb-4">
@@ -49,7 +49,11 @@
                 <div class="result-container">
                     {% for answer in result.answers %}
                         <div class="answer-item {% if answer.correct %}correct-answer{% else %}wrong-answer{% endif %}">
-                            <p class="fw-bold mb-2">{{ loop.index }}. {{ answer.question }}</p>
+                            {% if result.language == 'fr' and answer.question_fr %}
+                                <p class="fw-bold mb-2">{{ loop.index }}. {{ answer.question_fr }}</p>
+                            {% else %}
+                                <p class="fw-bold mb-2">{{ loop.index }}. {{ answer.question }}</p>
+                            {% endif %}
                             
                             <p>
                                 <span class="fw-bold">Votre réponse :</span> 
@@ -61,11 +65,22 @@
                             </p>
                             
                             {% if not answer.correct %}
-                                <p><span class="fw-bold">Réponse correcte :</span> <span class="text-success">{{ answer.correct_answer }}</span></p>
+                                <p><span class="fw-bold">Réponse correcte :</span> <span class="text-success">
+                                {% if result.language == 'fr' and answer.correct_answer_fr %}
+                                    {{ answer.correct_answer_fr }}
+                                {% else %}
+                                    {{ answer.correct_answer }}
+                                {% endif %}
+                                </span></p>
                             {% endif %}
                             
                             <p class="explanation mt-2">
-                                <i class="fas fa-info-circle me-1"></i> {{ answer.explanation }}
+                                <i class="fas fa-info-circle me-1"></i> 
+                                {% if result.language == 'fr' and answer.explanation_fr %}
+                                    {{ answer.explanation_fr }}
+                                {% else %}
+                                    {{ answer.explanation }}
+                                {% endif %}
                             </p>
                         </div>
                     {% endfor %}
