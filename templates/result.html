@@ -3,101 +3,121 @@
 {% block title %}Résultats - {{ result.quiz_name_fr if result.language == 'fr' else result.quiz_name }}{% endblock %}
 
 {% block content %}
-<div class="row py-4">
-    <div class="col-md-8 mx-auto">
-        <div class="card mb-4">
-            <div class="card-header">
-                <h2 class="mb-0">{{ result.quiz_name_fr if result.language == 'fr' else result.quiz_name }} - Résultats</h2>
+<div class="py-6">
+    <div class="max-w-3xl mx-auto">
+        <div class="rounded-lg border border-border bg-card mb-6">
+            <div class="p-4 border-b border-border">
+                <h2 class="text-xl font-bold">{{ result.quiz_name_fr if result.language == 'fr' else result.quiz_name }} - Résultats</h2>
             </div>
-            <div class="card-body">
-                <div class="score-display">
-                    <h3>Résultat : <span class="{% if result.score >= result.max_score * 0.7 %}text-success{% elif result.score >= result.max_score * 0.4 %}text-warning{% else %}text-danger{% endif %}">{{ result.score }}/{{ result.max_score }}</span> points</h3>
+            <div class="p-4">
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold mb-2">Résultat : 
+                        <span class="{% if result.score >= result.max_score * 0.7 %}text-green-500{% elif result.score >= result.max_score * 0.4 %}text-amber-500{% else %}text-red-500{% endif %}">
+                            {{ result.score }}/{{ result.max_score }}
+                        </span> points
+                    </h3>
                     
                     {% set percentage = (result.score / result.max_score) * 100 %}
-                    <div class="progress mt-3 mb-4">
-                        <div class="progress-bar 
-                                {% if percentage >= 70 %}bg-success
-                                {% elif percentage >= 40 %}bg-warning
-                                {% else %}bg-danger
-                                {% endif %}" 
-                            role="progressbar" 
-                            style="width: {{ percentage }}%" 
-                            aria-valuenow="{{ percentage }}" 
-                            aria-valuemin="0" 
-                            aria-valuemax="100">
-                            {{ percentage|round|int }}%
+                    <div class="w-full bg-secondary rounded-full h-2.5 mb-4">
+                        <div class="h-2.5 rounded-full 
+                                {% if percentage >= 70 %}bg-green-500
+                                {% elif percentage >= 40 %}bg-amber-500
+                                {% else %}bg-red-500
+                                {% endif %}"
+                            style="width: {{ percentage }}%">
                         </div>
                     </div>
+                    <div class="text-center text-sm text-muted-foreground mb-4">{{ percentage|round|int }}%</div>
                     
                     {% if percentage >= 70 %}
-                        <div class="alert alert-success" role="alert">
-                            <i class="fas fa-trophy me-2"></i> Bravo ! Vous avez très bien réussi ce quiz !
+                        <div class="rounded-lg border border-green-500/20 bg-green-500/10 p-4 text-green-600">
+                            <div class="flex">
+                                <i class="fas fa-trophy mr-2 mt-0.5"></i>
+                                <div>Bravo ! Vous avez très bien réussi ce quiz !</div>
+                            </div>
                         </div>
                     {% elif percentage >= 40 %}
-                        <div class="alert alert-warning" role="alert">
-                            <i class="fas fa-thumbs-up me-2"></i> Pas mal ! Mais vous pouvez encore vous améliorer.
+                        <div class="rounded-lg border border-amber-500/20 bg-amber-500/10 p-4 text-amber-600">
+                            <div class="flex">
+                                <i class="fas fa-thumbs-up mr-2 mt-0.5"></i>
+                                <div>Pas mal ! Mais vous pouvez encore vous améliorer.</div>
+                            </div>
                         </div>
                     {% else %}
-                        <div class="alert alert-danger" role="alert">
-                            <i class="fas fa-book-reader me-2"></i> Vous devriez réviser davantage ce thème.
+                        <div class="rounded-lg border border-red-500/20 bg-red-500/10 p-4 text-red-600">
+                            <div class="flex">
+                                <i class="fas fa-book-reader mr-2 mt-0.5"></i>
+                                <div>Vous devriez réviser davantage ce thème.</div>
+                            </div>
                         </div>
                     {% endif %}
                 </div>
                 
-                <h4 class="mb-3 mt-4">Réponses détaillées :</h4>
+                <h4 class="text-lg font-semibold mb-4">Réponses détaillées :</h4>
                 
-                <div class="result-container">
+                <div class="space-y-6">
                     {% for answer in result.answers %}
-                        <div class="answer-item {% if answer.correct %}correct-answer{% else %}wrong-answer{% endif %}">
+                        <div class="rounded-lg border p-4 {% if answer.correct %}border-green-500/20 bg-green-500/5{% else %}border-red-500/20 bg-red-500/5{% endif %}">
                             <!-- Question dans les deux langues -->
-                            <p class="fw-bold mb-1">{{ loop.index }}. {{ answer.question }}</p>
+                            <p class="font-semibold mb-1">{{ loop.index }}. {{ answer.question }}</p>
                             {% if answer.question_fr %}
-                                <p class="text-muted fst-italic mb-3">
-                                    <i class="fas fa-language me-1"></i> {{ answer.question_fr }}
+                                <p class="text-muted-foreground italic mb-4">
+                                    <i class="fas fa-language mr-1"></i> {{ answer.question_fr }}
                                 </p>
                             {% endif %}
                             
                             <!-- Réponse de l'utilisateur -->
-                            <p>
-                                <span class="fw-bold">Votre réponse :</span> 
+                            <div class="mb-3">
+                                <span class="font-semibold">Votre réponse :</span> 
                                 {% if answer.correct %}
-                                    <span class="text-success"><i class="fas fa-check-circle me-1"></i>{{ answer.user_answer }}</span>
+                                    <span class="text-green-600 ml-2"><i class="fas fa-check-circle mr-1"></i>{{ answer.user_answer }}</span>
                                 {% else %}
-                                    <span class="text-danger"><i class="fas fa-times-circle me-1"></i>{{ answer.user_answer }}</span>
+                                    <span class="text-red-600 ml-2"><i class="fas fa-times-circle mr-1"></i>{{ answer.user_answer }}</span>
                                 {% endif %}
-                            </p>
+                            </div>
                             
                             <!-- Réponse correcte (si erreur) -->
                             {% if not answer.correct %}
-                                <p><span class="fw-bold">Réponse correcte :</span></p>
-                                <p class="text-success">
-                                    {{ answer.correct_answer }}
-                                    {% if answer.correct_answer_fr and answer.correct_answer_fr != answer.correct_answer %}
-                                        <br><span class="text-muted fst-italic"><i class="fas fa-language me-1"></i> {{ answer.correct_answer_fr }}</span>
-                                    {% endif %}
-                                </p>
+                                <div class="mb-3">
+                                    <div class="font-semibold mb-1">Réponse correcte :</div>
+                                    <div class="text-green-600 ml-2">
+                                        {{ answer.correct_answer }}
+                                        {% if answer.correct_answer_fr and answer.correct_answer_fr != answer.correct_answer %}
+                                            <div class="text-muted-foreground italic">
+                                                <i class="fas fa-language mr-1"></i> {{ answer.correct_answer_fr }}
+                                            </div>
+                                        {% endif %}
+                                    </div>
+                                </div>
                             {% endif %}
                             
                             <!-- Explication dans les deux langues -->
-                            <div class="explanation mt-2 bg-light p-2 rounded">
-                                <p class="mb-1"><i class="fas fa-info-circle me-1"></i> {{ answer.explanation }}</p>
-                                {% if answer.explanation_fr and answer.explanation_fr != answer.explanation %}
-                                    <p class="text-muted fst-italic mb-0">
-                                        <i class="fas fa-language me-1"></i> {{ answer.explanation_fr }}
-                                    </p>
-                                {% endif %}
+                            <div class="rounded-md bg-secondary/50 p-3 mt-3">
+                                <div class="flex">
+                                    <i class="fas fa-info-circle mr-2 mt-1 text-primary"></i>
+                                    <div>
+                                        <p class="mb-1">{{ answer.explanation }}</p>
+                                        {% if answer.explanation_fr and answer.explanation_fr != answer.explanation %}
+                                            <p class="text-muted-foreground italic mb-0">
+                                                <i class="fas fa-language mr-1"></i> {{ answer.explanation_fr }}
+                                            </p>
+                                        {% endif %}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     {% endfor %}
                 </div>
             </div>
-            <div class="card-footer">
-                <div class="d-flex justify-content-between">
-                    <a href="{{ url_for('quiz', quiz_name=result.quiz_name) }}" class="btn btn-outline-primary">
-                        <i class="fas fa-redo me-1"></i> Recommencer ce quiz
+            <div class="p-4 border-t border-border">
+                <div class="flex justify-between">
+                    <a href="{{ url_for('quiz', quiz_name=result.quiz_name) }}" 
+                       class="inline-flex items-center justify-center rounded-md text-sm font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">
+                        <i class="fas fa-redo mr-1"></i> Recommencer ce quiz
                     </a>
-                    <a href="{{ url_for('index') }}" class="btn btn-primary">
-                        <i class="fas fa-home me-1"></i> Retour à l'accueil
+                    <a href="{{ url_for('index') }}" 
+                       class="inline-flex items-center justify-center rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+                        <i class="fas fa-home mr-1"></i> Retour à l'accueil
                     </a>
                 </div>
             </div>

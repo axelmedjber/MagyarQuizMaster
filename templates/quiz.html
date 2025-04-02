@@ -3,39 +3,45 @@
 {% block title %}{{ quiz_name_fr if language == 'fr' else quiz_name }} - Magyar Quiz{% endblock %}
 
 {% block content %}
-<div class="row py-4">
-    <div class="col-md-8 mx-auto">
-        <h1 class="mb-4">{{ quiz_name_fr if language == 'fr' else quiz_name }}</h1>
+<div class="py-6">
+    <div class="max-w-3xl mx-auto">
+        <h1 class="text-2xl font-bold mb-6">{{ quiz_name_fr if language == 'fr' else quiz_name }}</h1>
         
         {% if questions|length == 0 %}
-            <div class="alert alert-warning" role="alert">
-                <h4 class="alert-heading">Aucune question disponible !</h4>
-                <p>Ce quiz n'a pas encore de questions.</p>
-                <hr>
+            <div class="rounded-lg border border-border bg-muted p-4 mb-4">
+                <h4 class="text-lg font-semibold flex items-center">
+                    <i class="fas fa-exclamation-triangle text-amber-500 mr-2"></i>
+                    Aucune question disponible !
+                </h4>
+                <p class="my-2">Ce quiz n'a pas encore de questions.</p>
+                <hr class="border-t border-border my-2">
                 <p class="mb-0">Revenez plus tard ou essayez un autre quiz.</p>
             </div>
-            <a href="{{ url_for('index') }}" class="btn btn-primary">Retour à l'accueil</a>
+            <a href="{{ url_for('index') }}" 
+               class="inline-flex items-center justify-center rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+                <i class="fas fa-home mr-1"></i> Retour à l'accueil
+            </a>
         {% else %}
-            <div class="card mb-4">
-                <div class="card-header d-flex justify-content-between align-items-center">
+            <div class="rounded-lg border border-border bg-card mb-6">
+                <div class="p-4 border-b border-border flex justify-between items-center">
                     <span>Quiz: 5 questions | 2,5 points par bonne réponse</span>
-                    <div id="timer-display" class="badge bg-secondary">5:00</div>
+                    <div id="timer-display" class="inline-flex h-6 items-center rounded-md border border-border bg-secondary px-2 text-sm font-semibold text-secondary-foreground">5:00</div>
                 </div>
-                <div class="card-body">
-                    <div class="progress progress-container">
-                        <div id="quiz-progress" class="progress-bar quiz-progress" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="p-4">
+                    <div class="w-full bg-secondary rounded-full h-2.5 mb-4">
+                        <div id="quiz-progress" class="bg-primary h-2.5 rounded-full" style="width: 0%"></div>
                     </div>
                     
                     <form id="quiz-form" action="{{ url_for('submit_quiz') }}" method="post">
                         {% for question in questions %}
                             <div class="question-container hidden" id="question-{{ loop.index0 }}">
                                 <!-- Question en hongrois -->
-                                <h5 class="mb-2">{{ loop.index }}. {{ question.question }}</h5>
+                                <h5 class="text-lg font-semibold mb-2">{{ loop.index }}. {{ question.question }}</h5>
                                 
                                 <!-- Traduction française -->
                                 {% if question.question_fr %}
-                                    <p class="mb-3 text-muted fst-italic">
-                                        <i class="fas fa-language me-1"></i> {{ question.question_fr }}
+                                    <p class="mb-4 text-muted-foreground italic">
+                                        <i class="fas fa-language mr-1"></i> {{ question.question_fr }}
                                     </p>
                                 {% endif %}
                                 
@@ -43,39 +49,49 @@
                                 
                                 <!-- Options avec traductions -->
                                 {% for option in question.options %}
-                                <div class="mb-3">
-                                    <input type="radio" name="question_{{ question_index }}" id="q{{ question_index }}_option{{ loop.index0 }}" 
-                                           value="{{ question.options_fr[loop.index0] if question.options_fr else option }}" 
-                                           class="option-input" required>
-                                    <label for="q{{ question_index }}_option{{ loop.index0 }}" class="option-label">
-                                        {{ ["A", "B", "C"][loop.index0] }}) {{ option }}
-                                        {% if question.options_fr %}
-                                            <br><small class="text-muted fst-italic">{{ question.options_fr[loop.index0] }}</small>
-                                        {% endif %}
-                                    </label>
+                                <div class="mb-4">
+                                    <div class="flex items-start space-x-2">
+                                        <input type="radio" 
+                                               name="question_{{ question_index }}" 
+                                               id="q{{ question_index }}_option{{ loop.index0 }}" 
+                                               value="{{ question.options_fr[loop.index0] if question.options_fr else option }}" 
+                                               class="mt-1 h-4 w-4 rounded-full border border-input bg-background text-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2" 
+                                               required>
+                                        <label for="q{{ question_index }}_option{{ loop.index0 }}" class="text-base">
+                                            <span class="font-semibold">{{ ["A", "B", "C"][loop.index0] }})</span> {{ option }}
+                                            {% if question.options_fr %}
+                                                <div class="text-sm text-muted-foreground italic">{{ question.options_fr[loop.index0] }}</div>
+                                            {% endif %}
+                                        </label>
+                                    </div>
                                 </div>
                                 {% endfor %}
                                 
-                                <div class="d-flex justify-content-between mt-4">
+                                <div class="flex justify-between mt-6">
                                     {% if not loop.first %}
-                                    <button type="button" class="btn btn-outline-secondary prev-button" data-question-index="{{ loop.index0 }}">
-                                        <i class="fas fa-arrow-left me-1"></i> Précédent
+                                    <button type="button" 
+                                            class="inline-flex items-center justify-center rounded-md text-sm font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 prev-button" 
+                                            data-question-index="{{ loop.index0 }}">
+                                        <i class="fas fa-arrow-left mr-1"></i> Précédent
                                     </button>
                                     {% else %}
                                     <div></div>
                                     {% endif %}
                                     
                                     {% if not loop.last %}
-                                    <button type="button" class="btn btn-primary next-button" data-question-index="{{ loop.index0 }}">
-                                        Suivant <i class="fas fa-arrow-right ms-1"></i>
+                                    <button type="button" 
+                                            class="inline-flex items-center justify-center rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 next-button" 
+                                            data-question-index="{{ loop.index0 }}">
+                                        Suivant <i class="fas fa-arrow-right ml-1"></i>
                                     </button>
                                     {% endif %}
                                 </div>
                             </div>
                         {% endfor %}
                         
-                        <button type="submit" id="submit-button" class="btn btn-success w-100 hidden">
-                            <i class="fas fa-check-circle me-1"></i> Terminer le quiz
+                        <button type="submit" id="submit-button" 
+                                class="hidden w-full inline-flex items-center justify-center rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 mt-4">
+                            <i class="fas fa-check-circle mr-1"></i> Terminer le quiz
                         </button>
                     </form>
                 </div>
