@@ -31,10 +31,11 @@
                             <div class="question-container hidden" id="question-{{ loop.index0 }}">
                                 <h5 class="mb-3">{{ loop.index }}. {{ question.question }}</h5>
                                 
+                                {% set question_index = loop.index0 %}
                                 {% for option in question.options %}
                                 <div class="mb-3">
-                                    <input type="radio" name="question_{{ loop.parent.loop.index0 }}" id="q{{ loop.parent.loop.index0 }}_option{{ loop.index0 }}" value="{{ option }}" class="option-input" required>
-                                    <label for="q{{ loop.parent.loop.index0 }}_option{{ loop.index0 }}" class="option-label">
+                                    <input type="radio" name="question_{{ question_index }}" id="q{{ question_index }}_option{{ loop.index0 }}" value="{{ option }}" class="option-input" required>
+                                    <label for="q{{ question_index }}_option{{ loop.index0 }}" class="option-label">
                                         {{ ["A", "B", "C"][loop.index0] }}) {{ option }}
                                     </label>
                                 </div>
