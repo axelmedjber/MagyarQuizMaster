@@ -29,32 +29,32 @@
                     <form id="quiz-form" action="{{ url_for('submit_quiz') }}" method="post">
                         {% for question in questions %}
                             <div class="question-container hidden" id="question-{{ loop.index0 }}">
-                                {% if language == 'fr' and question.question_fr %}
-                                    <h5 class="mb-3">{{ loop.index }}. {{ question.question_fr }}</h5>
-                                {% else %}
-                                    <h5 class="mb-3">{{ loop.index }}. {{ question.question }}</h5>
+                                <!-- Question en hongrois -->
+                                <h5 class="mb-2">{{ loop.index }}. {{ question.question }}</h5>
+                                
+                                <!-- Traduction française -->
+                                {% if question.question_fr %}
+                                    <p class="mb-3 text-muted fst-italic">
+                                        <i class="fas fa-language me-1"></i> {{ question.question_fr }}
+                                    </p>
                                 {% endif %}
                                 
                                 {% set question_index = loop.index0 %}
-                                {% if language == 'fr' and question.options_fr %}
-                                    {% for option in question.options_fr %}
-                                    <div class="mb-3">
-                                        <input type="radio" name="question_{{ question_index }}" id="q{{ question_index }}_option{{ loop.index0 }}" value="{{ question.options_fr[loop.index0] }}" class="option-input" required>
-                                        <label for="q{{ question_index }}_option{{ loop.index0 }}" class="option-label">
-                                            {{ ["A", "B", "C"][loop.index0] }}) {{ option }}
-                                        </label>
-                                    </div>
-                                    {% endfor %}
-                                {% else %}
-                                    {% for option in question.options %}
-                                    <div class="mb-3">
-                                        <input type="radio" name="question_{{ question_index }}" id="q{{ question_index }}_option{{ loop.index0 }}" value="{{ option }}" class="option-input" required>
-                                        <label for="q{{ question_index }}_option{{ loop.index0 }}" class="option-label">
-                                            {{ ["A", "B", "C"][loop.index0] }}) {{ option }}
-                                        </label>
-                                    </div>
-                                    {% endfor %}
-                                {% endif %}
+                                
+                                <!-- Options avec traductions -->
+                                {% for option in question.options %}
+                                <div class="mb-3">
+                                    <input type="radio" name="question_{{ question_index }}" id="q{{ question_index }}_option{{ loop.index0 }}" 
+                                           value="{{ question.options_fr[loop.index0] if question.options_fr else option }}" 
+                                           class="option-input" required>
+                                    <label for="q{{ question_index }}_option{{ loop.index0 }}" class="option-label">
+                                        {{ ["A", "B", "C"][loop.index0] }}) {{ option }}
+                                        {% if question.options_fr %}
+                                            <br><small class="text-muted fst-italic">{{ question.options_fr[loop.index0] }}</small>
+                                        {% endif %}
+                                    </label>
+                                </div>
+                                {% endfor %}
                                 
                                 <div class="d-flex justify-content-between mt-4">
                                     {% if not loop.first %}

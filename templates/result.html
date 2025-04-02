@@ -49,12 +49,15 @@
                 <div class="result-container">
                     {% for answer in result.answers %}
                         <div class="answer-item {% if answer.correct %}correct-answer{% else %}wrong-answer{% endif %}">
-                            {% if result.language == 'fr' and answer.question_fr %}
-                                <p class="fw-bold mb-2">{{ loop.index }}. {{ answer.question_fr }}</p>
-                            {% else %}
-                                <p class="fw-bold mb-2">{{ loop.index }}. {{ answer.question }}</p>
+                            <!-- Question dans les deux langues -->
+                            <p class="fw-bold mb-1">{{ loop.index }}. {{ answer.question }}</p>
+                            {% if answer.question_fr %}
+                                <p class="text-muted fst-italic mb-3">
+                                    <i class="fas fa-language me-1"></i> {{ answer.question_fr }}
+                                </p>
                             {% endif %}
                             
+                            <!-- Réponse de l'utilisateur -->
                             <p>
                                 <span class="fw-bold">Votre réponse :</span> 
                                 {% if answer.correct %}
@@ -64,24 +67,26 @@
                                 {% endif %}
                             </p>
                             
+                            <!-- Réponse correcte (si erreur) -->
                             {% if not answer.correct %}
-                                <p><span class="fw-bold">Réponse correcte :</span> <span class="text-success">
-                                {% if result.language == 'fr' and answer.correct_answer_fr %}
-                                    {{ answer.correct_answer_fr }}
-                                {% else %}
+                                <p><span class="fw-bold">Réponse correcte :</span></p>
+                                <p class="text-success">
                                     {{ answer.correct_answer }}
-                                {% endif %}
-                                </span></p>
+                                    {% if answer.correct_answer_fr and answer.correct_answer_fr != answer.correct_answer %}
+                                        <br><span class="text-muted fst-italic"><i class="fas fa-language me-1"></i> {{ answer.correct_answer_fr }}</span>
+                                    {% endif %}
+                                </p>
                             {% endif %}
                             
-                            <p class="explanation mt-2">
-                                <i class="fas fa-info-circle me-1"></i> 
-                                {% if result.language == 'fr' and answer.explanation_fr %}
-                                    {{ answer.explanation_fr }}
-                                {% else %}
-                                    {{ answer.explanation }}
+                            <!-- Explication dans les deux langues -->
+                            <div class="explanation mt-2 bg-light p-2 rounded">
+                                <p class="mb-1"><i class="fas fa-info-circle me-1"></i> {{ answer.explanation }}</p>
+                                {% if answer.explanation_fr and answer.explanation_fr != answer.explanation %}
+                                    <p class="text-muted fst-italic mb-0">
+                                        <i class="fas fa-language me-1"></i> {{ answer.explanation_fr }}
+                                    </p>
                                 {% endif %}
-                            </p>
+                            </div>
                         </div>
                     {% endfor %}
                 </div>
