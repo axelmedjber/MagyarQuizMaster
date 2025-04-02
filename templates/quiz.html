@@ -33,8 +33,8 @@
                                 
                                 {% for option in question.options %}
                                 <div class="mb-3">
-                                    <input type="radio" name="question_{{ loop.parent.index0 }}" id="q{{ loop.parent.index0 }}_option{{ loop.index0 }}" value="{{ option }}" class="option-input" required>
-                                    <label for="q{{ loop.parent.index0 }}_option{{ loop.index0 }}" class="option-label">
+                                    <input type="radio" name="question_{{ loop.parent.loop.index0 }}" id="q{{ loop.parent.loop.index0 }}_option{{ loop.index0 }}" value="{{ option }}" class="option-input" required>
+                                    <label for="q{{ loop.parent.loop.index0 }}_option{{ loop.index0 }}" class="option-label">
                                         {{ ["A", "B", "C"][loop.index0] }}) {{ option }}
                                     </label>
                                 </div>
