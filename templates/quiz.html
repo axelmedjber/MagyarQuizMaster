@@ -1,0 +1,70 @@
+{% extends 'layout.html' %}
+
+{% block title %}{{ quiz_name }} - Magyar Quiz{% endblock %}
+
+{% block content %}
+<div class="row py-4">
+    <div class="col-md-8 mx-auto">
+        <h1 class="mb-4">{{ quiz_name }}</h1>
+        
+        {% if questions|length == 0 %}
+            <div class="alert alert-warning" role="alert">
+                <h4 class="alert-heading">Aucune question disponible !</h4>
+                <p>Ce quiz n'a pas encore de questions.</p>
+                <hr>
+                <p class="mb-0">Revenez plus tard ou essayez un autre quiz.</p>
+            </div>
+            <a href="{{ url_for('index') }}" class="btn btn-primary">Retour à l'accueil</a>
+        {% else %}
+            <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <span>Quiz: 5 questions | 2,5 points par bonne réponse</span>
+                    <div id="timer-display" class="badge bg-secondary">5:00</div>
+                </div>
+                <div class="card-body">
+                    <div class="progress progress-container">
+                        <div id="quiz-progress" class="progress-bar quiz-progress" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    
+                    <form id="quiz-form" action="{{ url_for('submit_quiz') }}" method="post">
+                        {% for question in questions %}
+                            <div class="question-container hidden" id="question-{{ loop.index0 }}">
+                                <h5 class="mb-3">{{ loop.index }}. {{ question.question }}</h5>
+                                
+                                {% for option in question.options %}
+                                <div class="mb-3">
+                                    <input type="radio" name="question_{{ loop.parent.index0 }}" id="q{{ loop.parent.index0 }}_option{{ loop.index0 }}" value="{{ option }}" class="option-input" required>
+                                    <label for="q{{ loop.parent.index0 }}_option{{ loop.index0 }}" class="option-label">
+                                        {{ ["A", "B", "C"][loop.index0] }}) {{ option }}
+                                    </label>
+                                </div>
+                                {% endfor %}
+                                
+                                <div class="d-flex justify-content-between mt-4">
+                                    {% if not loop.first %}
+                                    <button type="button" class="btn btn-outline-secondary prev-button" data-question-index="{{ loop.index0 }}">
+                                        <i class="fas fa-arrow-left me-1"></i> Précédent
+                                    </button>
+                                    {% else %}
+                                    <div></div>
+                                    {% endif %}
+                                    
+                                    {% if not loop.last %}
+                                    <button type="button" class="btn btn-primary next-button" data-question-index="{{ loop.index0 }}">
+                                        Suivant <i class="fas fa-arrow-right ms-1"></i>
+                                    </button>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                        
+                        <button type="submit" id="submit-button" class="btn btn-success w-100 hidden">
+                            <i class="fas fa-check-circle me-1"></i> Terminer le quiz
+                        </button>
+                    </form>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

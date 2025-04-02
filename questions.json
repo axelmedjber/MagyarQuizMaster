@@ -1,0 +1,212 @@
+[
+  {
+    "theme": "Nemzeti jelképek és ünnepek",
+    "question": "Mi a magyar zászló három színe?",
+    "options": ["Kék, fehér, zöld", "Piros, fehér, zöld", "Sárga, kék, piros"],
+    "correct_answer": "Piros, fehér, zöld",
+    "explanation": "A magyar zászló színei piros, fehér és zöld."
+  },
+  {
+    "theme": "Nemzeti jelképek és ünnepek",
+    "question": "Melyik a magyar nemzeti himnusz címe?",
+    "options": ["Szózat", "Himnusz", "Magyar Dal"],
+    "correct_answer": "Himnusz",
+    "explanation": "A magyar nemzeti himnusz címe egyszerűen 'Himnusz', amelyet Kölcsey Ferenc írt 1823-ban, zenéjét Erkel Ferenc szerezte."
+  },
+  {
+    "theme": "Nemzeti jelképek és ünnepek",
+    "question": "Melyik ünnep kapcsolódik Szent István királyhoz?",
+    "options": ["Március 15.", "Augusztus 20.", "Október 23."],
+    "correct_answer": "Augusztus 20.",
+    "explanation": "Augusztus 20-a Szent István király ünnepe, amely Magyarország hivatalos állami ünnepe, és az államalapítást is ekkor ünnepeljük."
+  },
+  {
+    "theme": "Nemzeti jelképek és ünnepek",
+    "question": "Mi a magyar címer egyik fontos eleme?",
+    "options": ["Korona", "Sas", "Nap"],
+    "correct_answer": "Korona",
+    "explanation": "A magyar címer tetején a Szent Korona található, amely Magyarország szuverenitásának szimbóluma."
+  },
+  {
+    "theme": "Nemzeti jelképek és ünnepek",
+    "question": "Melyik nemzeti ünnep emlékezik az 1956-os forradalomra?",
+    "options": ["Március 15.", "Augusztus 20.", "Október 23."],
+    "correct_answer": "Október 23.",
+    "explanation": "Október 23-a az 1956-os forradalom és szabadságharc emléknapja, amely nemzeti ünnep Magyarországon."
+  },
+  {
+    "theme": "Történelmi események",
+    "question": "Mikor alapították a magyar államot?",
+    "options": ["896", "1000", "1526"],
+    "correct_answer": "1000",
+    "explanation": "A magyar államot hivatalosan 1000-ben alapították, amikor István királyt megkoronázták, és ezzel létrejött a keresztény Magyar Királyság."
+  },
+  {
+    "theme": "Történelmi események",
+    "question": "Melyik esemény zárta le az 1848-49-es forradalmat és szabadságharcot?",
+    "options": ["A mohácsi csata", "A világosi fegyverletétel", "A trianoni békeszerződés"],
+    "correct_answer": "A világosi fegyverletétel",
+    "explanation": "Az 1848-49-es forradalmat és szabadságharcot a világosi fegyverletétel zárta le 1849. augusztus 13-án, amikor Görgei Artúr honvédtábornok letette a fegyvert az orosz csapatok előtt."
+  },
+  {
+    "theme": "Történelmi események",
+    "question": "Mikor írták alá a trianoni békeszerződést?",
+    "options": ["1918", "1920", "1945"],
+    "correct_answer": "1920",
+    "explanation": "A trianoni békeszerződést 1920. június 4-én írták alá, mely a történelmi Magyarország területének jelentős részét más országokhoz csatolta."
+  },
+  {
+    "theme": "Történelmi események",
+    "question": "Melyik évben zajlott az 1956-os magyar forradalom?",
+    "options": ["1945", "1956", "1989"],
+    "correct_answer": "1956",
+    "explanation": "Az 1956-os magyar forradalom és szabadságharc 1956. október 23-án kezdődött, és november 10-ig tartott, amikor a szovjet csapatok leverték."
+  },
+  {
+    "theme": "Történelmi események",
+    "question": "Melyik évben történt a magyar rendszerváltás?",
+    "options": ["1985", "1990", "1995"],
+    "correct_answer": "1990",
+    "explanation": "A magyar rendszerváltás folyamata az 1989-1990-es években zajlott, az első szabad választásokat 1990 tavaszán tartották meg."
+  },
+  {
+    "theme": "Irodalom és zene",
+    "question": "Ki írta a 'Szózat' című költeményt?",
+    "options": ["Petőfi Sándor", "Vörösmarty Mihály", "Arany János"],
+    "correct_answer": "Vörösmarty Mihály",
+    "explanation": "A 'Szózat' című hazafias költeményt Vörösmarty Mihály írta 1836-ban, amely a Himnusz mellett Magyarország második nemzeti énekének számít."
+  },
+  {
+    "theme": "Irodalom és zene",
+    "question": "Melyik zeneszerző írta a 'Háry János' című daljátékot?",
+    "options": ["Bartók Béla", "Kodály Zoltán", "Liszt Ferenc"],
+    "correct_answer": "Kodály Zoltán",
+    "explanation": "A 'Háry János' című daljátékot Kodály Zoltán szerezte 1926-ban, amely a magyar népmese hagyományát ötvözi a klasszikus zenével."
+  },
+  {
+    "theme": "Irodalom és zene",
+    "question": "Ki volt a magyar népzene egyik legjelentősebb gyűjtője és kutatója?",
+    "options": ["Bartók Béla", "Erkel Ferenc", "Dohnányi Ernő"],
+    "correct_answer": "Bartók Béla",
+    "explanation": "Bartók Béla a magyar népzene egyik legjelentősebb gyűjtője és kutatója volt, aki több ezer népdalt gyűjtött és rendszerezett tudományos módszerekkel."
+  },
+  {
+    "theme": "Irodalom és zene",
+    "question": "Ki írta az 'Egri csillagok' című regényt?",
+    "options": ["Jókai Mór", "Gárdonyi Géza", "Mikszáth Kálmán"],
+    "correct_answer": "Gárdonyi Géza",
+    "explanation": "Az 'Egri csillagok' című történelmi regényt Gárdonyi Géza írta 1899-ben, amely az 1552-es egri vár török ostromát dolgozza fel."
+  },
+  {
+    "theme": "Irodalom és zene",
+    "question": "Melyik híres költeményünk kezdődik így: 'Talpra magyar, hí a haza!'?",
+    "options": ["Szózat", "Himnusz", "Nemzeti dal"],
+    "correct_answer": "Nemzeti dal",
+    "explanation": "A 'Nemzeti dal' Petőfi Sándor verse, amely az 1848. március 15-i forradalom szimbólumává vált. A vers a 'Talpra magyar, hí a haza!' sorral kezdődik."
+  },
+  {
+    "theme": "Alkotmányos intézmények",
+    "question": "Ki a magyar államfő?",
+    "options": ["A miniszterelnök", "A köztársasági elnök", "Az országgyűlés elnöke"],
+    "correct_answer": "A köztársasági elnök",
+    "explanation": "Magyarország államfője a köztársasági elnök, akit az Országgyűlés választ öt évre."
+  },
+  {
+    "theme": "Alkotmányos intézmények",
+    "question": "Hány képviselő ül a magyar Országgyűlésben?",
+    "options": ["199", "386", "120"],
+    "correct_answer": "199",
+    "explanation": "A 2011-es választási reform óta a magyar Országgyűlésben 199 képviselő ül (korábban 386 volt)."
+  },
+  {
+    "theme": "Alkotmányos intézmények",
+    "question": "Mi Magyarország legfőbb népképviseleti szerve?",
+    "options": ["A kormány", "Az Országgyűlés", "A köztársasági elnöki hivatal"],
+    "correct_answer": "Az Országgyűlés",
+    "explanation": "Magyarország legfőbb népképviseleti szerve az Országgyűlés, amely a törvényhozó hatalmat gyakorolja."
+  },
+  {
+    "theme": "Alkotmányos intézmények",
+    "question": "Ki a magyar kormány feje?",
+    "options": ["A köztársasági elnök", "A miniszterelnök", "Az Országgyűlés elnöke"],
+    "correct_answer": "A miniszterelnök",
+    "explanation": "A magyar kormány feje a miniszterelnök, aki a végrehajtó hatalom vezetője és a kormányt irányítja."
+  },
+  {
+    "theme": "Alkotmányos intézmények",
+    "question": "Melyik bíróság Magyarország legfőbb bírói szerve?",
+    "options": ["Alkotmánybíróság", "Kúria", "Legfelsőbb Bíróság"],
+    "correct_answer": "Kúria",
+    "explanation": "Magyarország legfőbb bírói szerve a Kúria, amely a rendes bírósági rendszer csúcsán áll. Az Alkotmánybíróság külön alkotmányos intézmény."
+  },
+  {
+    "theme": "Állampolgári jogok és kötelességek",
+    "question": "Hány éves kortól szavazhatnak a magyar állampolgárok?",
+    "options": ["16", "18", "21"],
+    "correct_answer": "18",
+    "explanation": "A magyar állampolgárok 18 éves koruktól szavazhatnak az országgyűlési és önkormányzati választásokon, valamint népszavazásokon."
+  },
+  {
+    "theme": "Állampolgári jogok és kötelességek",
+    "question": "Melyik NEM tartozik az alapvető állampolgári kötelességek közé?",
+    "options": ["Honvédelmi kötelezettség", "Adófizetés", "Párttagság"],
+    "correct_answer": "Párttagság",
+    "explanation": "A párttagság nem tartozik az alapvető állampolgári kötelességek közé, az teljesen önkéntes. Az alapvető kötelességek között van a honvédelmi kötelezettség, az adófizetés és a tankötelezettség."
+  },
+  {
+    "theme": "Állampolgári jogok és kötelességek",
+    "question": "Mi a magyar állampolgárság megszerzésének egyik módja?",
+    "options": ["Születés", "Munkavállalás", "Turista vízum"],
+    "correct_answer": "Születés",
+    "explanation": "A magyar állampolgárság megszerzésének egyik alapvető módja a születés: magyar állampolgár gyermeke automatikusan magyar állampolgárságot kap."
+  },
+  {
+    "theme": "Állampolgári jogok és kötelességek",
+    "question": "Hány éves korig tart a tankötelezettség Magyarországon?",
+    "options": ["14", "16", "18"],
+    "correct_answer": "16",
+    "explanation": "Magyarországon a tankötelezettség 16 éves korig tart (korábban 18 éves kor volt)."
+  },
+  {
+    "theme": "Állampolgári jogok és kötelességek",
+    "question": "Melyik alapvető jog biztosítja a szabad véleménynyilvánítást?",
+    "options": ["Választójog", "Szólásszabadság", "Mozgásszabadság"],
+    "correct_answer": "Szólásszabadság",
+    "explanation": "A szólásszabadság (véleménynyilvánítás szabadsága) az a demokratikus alapjog, amely biztosítja, hogy az állampolgárok szabadon kifejezhetik véleményüket."
+  },
+  {
+    "theme": "Vegyes kérdések",
+    "question": "Melyik folyó folyik át Budapesten?",
+    "options": ["Tisza", "Duna", "Rába"],
+    "correct_answer": "Duna",
+    "explanation": "Budapesten a Duna folyik keresztül, amely Magyarország leghosszabb folyója, és a fővárost Buda és Pest részekre osztja."
+  },
+  {
+    "theme": "Vegyes kérdések",
+    "question": "Mi Magyarország hivatalos nyelve?",
+    "options": ["Magyar", "Angol", "Német"],
+    "correct_answer": "Magyar",
+    "explanation": "Magyarország hivatalos nyelve a magyar, amely a finnugor nyelvcsaládba tartozik."
+  },
+  {
+    "theme": "Vegyes kérdések",
+    "question": "Melyik a legnagyobb tó Magyarországon?",
+    "options": ["Velencei-tó", "Balaton", "Fertő tó"],
+    "correct_answer": "Balaton",
+    "explanation": "A Balaton Magyarország és egyben Közép-Európa legnagyobb tava, amelyet gyakran a 'magyar tenger'-nek is neveznek."
+  },
+  {
+    "theme": "Vegyes kérdések",
+    "question": "Mi Magyarország fizetőeszköze?",
+    "options": ["Euró", "Forint", "Korona"],
+    "correct_answer": "Forint",
+    "explanation": "Magyarország hivatalos fizetőeszköze a forint (Ft vagy HUF), amely 1946 óta az ország pénzneme."
+  },
+  {
+    "theme": "Vegyes kérdések",
+    "question": "Melyik magyar ételt tartják nemzeti ételnek?",
+    "options": ["Gulyásleves", "Székelykáposzta", "Töltött káposzta"],
+    "correct_answer": "Gulyásleves",
+    "explanation": "A gulyásleves a legismertebb magyar étel nemzetközi szinten, amelyet gyakran a magyar konyha szimbólumaként tartanak számon."
+  }
+]
