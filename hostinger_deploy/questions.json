@@ -1,0 +1,602 @@
+[
+  {
+    "theme": "Nemzeti jelképek és ünnepek",
+    "theme_fr": "Symboles nationaux et fêtes",
+    "question": "Mi a magyar zászló három színe?",
+    "question_fr": "Quelles sont les trois couleurs du drapeau hongrois ?",
+    "options": [
+      "Kék, fehér, zöld",
+      "Piros, fehér, zöld",
+      "Sárga, kék, piros"
+    ],
+    "options_fr": [
+      "Bleu, blanc, vert",
+      "Rouge, blanc, vert",
+      "Jaune, bleu, rouge"
+    ],
+    "correct_answer": "Piros, fehér, zöld",
+    "correct_answer_fr": "Rouge, blanc, vert",
+    "explanation": "A magyar zászló színei piros, fehér és zöld.",
+    "explanation_fr": "Les couleurs du drapeau hongrois sont rouge, blanc et vert."
+  },
+  {
+    "theme": "Nemzeti jelképek és ünnepek",
+    "theme_fr": "Symboles nationaux et fêtes",
+    "question": "Melyik a magyar nemzeti himnusz címe?",
+    "question_fr": "Quel est le titre de l'hymne national hongrois ?",
+    "options": [
+      "Szózat",
+      "Himnusz",
+      "Magyar Dal"
+    ],
+    "options_fr": [
+      "Szózat",
+      "Himnusz",
+      "Magyar Dal"
+    ],
+    "correct_answer": "Himnusz",
+    "correct_answer_fr": "Himnusz",
+    "explanation": "A magyar nemzeti himnusz címe egyszerűen 'Himnusz', amelyet Kölcsey Ferenc írt 1823-ban, zenéjét Erkel Ferenc szerezte.",
+    "explanation_fr": "Le titre de l'hymne national hongrois est simplement 'Himnusz', écrit par Ferenc Kölcsey en 1823, dont la musique a été composée par Ferenc Erkel."
+  },
+  {
+    "theme": "Nemzeti jelképek és ünnepek",
+    "question": "Melyik ünnep kapcsolódik Szent István királyhoz?",
+    "options": [
+      "Március 15.",
+      "Augusztus 20.",
+      "Október 23."
+    ],
+    "correct_answer": "Augusztus 20.",
+    "explanation": "Augusztus 20-a Szent István király ünnepe, amely Magyarország hivatalos állami ünnepe, és az államalapítást is ekkor ünnepeljük.",
+    "theme_fr": "Symboles nationaux et fêtes",
+    "question_fr": "Quelle fête est liée au roi Saint-Étienne ?",
+    "options_fr": [
+      "15 mars",
+      "20 août",
+      "23 octobre"
+    ],
+    "correct_answer_fr": "20 août",
+    "explanation_fr": "Le 20 août est la fête du roi Saint-Étienne, qui est la fête nationale officielle de la Hongrie et commémore la fondation de l'État."
+  },
+  {
+    "theme": "Nemzeti jelképek és ünnepek",
+    "question": "Mi a magyar címer egyik fontos eleme?",
+    "options": [
+      "Korona",
+      "Sas",
+      "Nap"
+    ],
+    "correct_answer": "Korona",
+    "explanation": "A magyar címer tetején a Szent Korona található, amely Magyarország szuverenitásának szimbóluma.",
+    "theme_fr": "Symboles nationaux et fêtes",
+    "question_fr": "Quel est l'un des éléments importants des armoiries hongroises ?",
+    "options_fr": [
+      "La couronne",
+      "L'aigle",
+      "Le soleil"
+    ],
+    "correct_answer_fr": "La couronne",
+    "explanation_fr": "La Sainte Couronne se trouve au sommet des armoiries hongroises, qui est un symbole de la souveraineté de la Hongrie."
+  },
+  {
+    "theme": "Nemzeti jelképek és ünnepek",
+    "question": "Melyik nemzeti ünnep emlékezik az 1956-os forradalomra?",
+    "options": [
+      "Március 15.",
+      "Augusztus 20.",
+      "Október 23."
+    ],
+    "correct_answer": "Október 23.",
+    "explanation": "Október 23-a az 1956-os forradalom és szabadságharc emléknapja, amely nemzeti ünnep Magyarországon.",
+    "theme_fr": "Symboles nationaux et fêtes",
+    "question_fr": "Quelle fête nationale commémore la Révolution de 1956 ?",
+    "options_fr": [
+      "15 mars",
+      "20 août",
+      "23 octobre"
+    ],
+    "correct_answer_fr": "23 octobre",
+    "explanation_fr": "Le 23 octobre est le jour commémoratif de la Révolution et Guerre d'Indépendance de 1956, qui est une fête nationale en Hongrie."
+  },
+  {
+    "theme": "Történelmi események",
+    "question": "Mikor alapították a magyar államot?",
+    "options": [
+      "896",
+      "1000",
+      "1526"
+    ],
+    "correct_answer": "1000",
+    "explanation": "A magyar államot hivatalosan 1000-ben alapították, amikor István királyt megkoronázták, és ezzel létrejött a keresztény Magyar Királyság.",
+    "theme_fr": "Événements historiques",
+    "question_fr": "Quand l'État hongrois a-t-il été fondé ?",
+    "options_fr": [
+      "896",
+      "1000",
+      "1526"
+    ],
+    "correct_answer_fr": "1000",
+    "explanation_fr": "L'État hongrois a été officiellement fondé en l'an 1000, lorsque le roi Étienne a été couronné, établissant ainsi le Royaume chrétien de Hongrie."
+  },
+  {
+    "theme": "Történelmi események",
+    "question": "Melyik esemény zárta le az 1848-49-es forradalmat és szabadságharcot?",
+    "options": [
+      "A mohácsi csata",
+      "A világosi fegyverletétel",
+      "A trianoni békeszerződés"
+    ],
+    "correct_answer": "A világosi fegyverletétel",
+    "explanation": "Az 1848-49-es forradalmat és szabadságharcot a világosi fegyverletétel zárta le 1849. augusztus 13-án, amikor Görgei Artúr honvédtábornok letette a fegyvert az orosz csapatok előtt.",
+    "theme_fr": "Événements historiques",
+    "question_fr": "Quel événement a mis fin à la Révolution et Guerre d'Indépendance de 1848-49 ?",
+    "options_fr": [
+      "La bataille de Mohács",
+      "La reddition de Világos",
+      "Le traité de Trianon"
+    ],
+    "correct_answer_fr": "La reddition de Világos",
+    "explanation_fr": "La Révolution et Guerre d'Indépendance de 1848-49 s'est terminée par la reddition de Világos le 13 août 1849, lorsque le général Artúr Görgei a déposé les armes devant les troupes russes."
+  },
+  {
+    "theme": "Történelmi események",
+    "question": "Mikor írták alá a trianoni békeszerződést?",
+    "options": [
+      "1918",
+      "1920",
+      "1945"
+    ],
+    "correct_answer": "1920",
+    "explanation": "A trianoni békeszerződést 1920. június 4-én írták alá, mely a történelmi Magyarország területének jelentős részét más országokhoz csatolta.",
+    "theme_fr": "Événements historiques",
+    "question_fr": "Quand le traité de Trianon a-t-il été signé ?",
+    "options_fr": [
+      "1918",
+      "1920",
+      "1945"
+    ],
+    "correct_answer_fr": "1920",
+    "explanation_fr": "Le traité de Trianon a été signé le 4 juin 1920, qui a attribué une grande partie du territoire historique de la Hongrie à d'autres pays."
+  },
+  {
+    "theme": "Történelmi események",
+    "question": "Melyik évben zajlott az 1956-os magyar forradalom?",
+    "options": [
+      "1945",
+      "1956",
+      "1989"
+    ],
+    "correct_answer": "1956",
+    "explanation": "Az 1956-os magyar forradalom és szabadságharc 1956. október 23-án kezdődött, és november 10-ig tartott, amikor a szovjet csapatok leverték.",
+    "theme_fr": "Événements historiques",
+    "question_fr": "En quelle année la Révolution hongroise de 1956 a-t-elle eu lieu ?",
+    "options_fr": [
+      "1945",
+      "1956",
+      "1989"
+    ],
+    "correct_answer_fr": "1956",
+    "explanation_fr": "La Révolution hongroise de 1956 a commencé le 23 octobre 1956 et a duré jusqu'au 10 novembre, quand elle a été écrasée par les troupes soviétiques."
+  },
+  {
+    "theme": "Történelmi események",
+    "question": "Melyik évben történt a magyar rendszerváltás?",
+    "options": [
+      "1985",
+      "1990",
+      "1995"
+    ],
+    "correct_answer": "1990",
+    "explanation": "A magyar rendszerváltás folyamata az 1989-1990-es években zajlott, az első szabad választásokat 1990 tavaszán tartották meg.",
+    "theme_fr": "Événements historiques",
+    "question_fr": "En quelle année le changement de régime a-t-il eu lieu en Hongrie ?",
+    "options_fr": [
+      "1985",
+      "1990",
+      "1995"
+    ],
+    "correct_answer_fr": "1990",
+    "explanation_fr": "Le processus de changement de régime en Hongrie s'est déroulé en 1989-1990, avec les premières élections libres organisées au printemps 1990."
+  },
+  {
+    "theme": "Irodalom és zene",
+    "question": "Ki írta a 'Szózat' című költeményt?",
+    "options": [
+      "Petőfi Sándor",
+      "Vörösmarty Mihály",
+      "Arany János"
+    ],
+    "correct_answer": "Vörösmarty Mihály",
+    "explanation": "A 'Szózat' című hazafias költeményt Vörösmarty Mihály írta 1836-ban, amely a Himnusz mellett Magyarország második nemzeti énekének számít.",
+    "theme_fr": "Littérature et musique",
+    "question_fr": "Qui a écrit le poème 'Szózat' ?",
+    "options_fr": [
+      "Sándor Petőfi",
+      "Mihály Vörösmarty",
+      "János Arany"
+    ],
+    "correct_answer_fr": "Mihály Vörösmarty",
+    "explanation_fr": "Le poème patriotique 'Szózat' a été écrit par Mihály Vörösmarty en 1836, considéré comme le deuxième hymne national de la Hongrie après le 'Himnusz'."
+  },
+  {
+    "theme": "Irodalom és zene",
+    "question": "Melyik zeneszerző írta a 'Háry János' című daljátékot?",
+    "options": [
+      "Bartók Béla",
+      "Kodály Zoltán",
+      "Liszt Ferenc"
+    ],
+    "correct_answer": "Kodály Zoltán",
+    "explanation": "A 'Háry János' című daljátékot Kodály Zoltán szerezte 1926-ban, amely a magyar népmese hagyományát ötvözi a klasszikus zenével.",
+    "theme_fr": "Littérature et musique",
+    "question_fr": "Quel compositeur a écrit l'opéra 'Háry János' ?",
+    "options_fr": [
+      "Béla Bartók",
+      "Zoltán Kodály",
+      "Franz Liszt"
+    ],
+    "correct_answer_fr": "Zoltán Kodály",
+    "explanation_fr": "L'opéra 'Háry János' a été composé par Zoltán Kodály en 1926, combinant la tradition des contes populaires hongrois avec la musique classique."
+  },
+  {
+    "theme": "Irodalom és zene",
+    "question": "Ki volt a magyar népzene egyik legjelentősebb gyűjtője és kutatója?",
+    "options": [
+      "Bartók Béla",
+      "Erkel Ferenc",
+      "Dohnányi Ernő"
+    ],
+    "correct_answer": "Bartók Béla",
+    "explanation": "Bartók Béla a magyar népzene egyik legjelentősebb gyűjtője és kutatója volt, aki több ezer népdalt gyűjtött és rendszerezett tudományos módszerekkel.",
+    "theme_fr": "Littérature et musique",
+    "question_fr": "Qui était l'un des plus importants collecteurs et chercheurs de musique folklorique hongroise ?",
+    "options_fr": [
+      "Béla Bartók",
+      "Ferenc Erkel",
+      "Ernő Dohnányi"
+    ],
+    "correct_answer_fr": "Béla Bartók",
+    "explanation_fr": "Béla Bartók était l'un des plus importants collecteurs et chercheurs de musique folklorique hongroise, ayant collecté et systématisé des milliers de chansons populaires avec des méthodes scientifiques."
+  },
+  {
+    "theme": "Irodalom és zene",
+    "question": "Ki írta az 'Egri csillagok' című regényt?",
+    "options": [
+      "Jókai Mór",
+      "Gárdonyi Géza",
+      "Mikszáth Kálmán"
+    ],
+    "correct_answer": "Gárdonyi Géza",
+    "explanation": "Az 'Egri csillagok' című történelmi regényt Gárdonyi Géza írta 1899-ben, amely az 1552-es egri vár török ostromát dolgozza fel.",
+    "theme_fr": "Littérature et musique",
+    "question_fr": "Qui a écrit le roman 'Étoiles d'Eger' (Egri csillagok) ?",
+    "options_fr": [
+      "Mór Jókai",
+      "Géza Gárdonyi",
+      "Kálmán Mikszáth"
+    ],
+    "correct_answer_fr": "Géza Gárdonyi",
+    "explanation_fr": "Le roman historique 'Étoiles d'Eger' a été écrit par Géza Gárdonyi en 1899, relatant le siège ottoman du château d'Eger en 1552."
+  },
+  {
+    "theme": "Irodalom és zene",
+    "question": "Melyik híres költeményünk kezdődik így: 'Talpra magyar, hí a haza!'?",
+    "options": [
+      "Szózat",
+      "Himnusz",
+      "Nemzeti dal"
+    ],
+    "correct_answer": "Nemzeti dal",
+    "explanation": "A 'Nemzeti dal' Petőfi Sándor verse, amely az 1848. március 15-i forradalom szimbólumává vált. A vers a 'Talpra magyar, hí a haza!' sorral kezdődik.",
+    "theme_fr": "Littérature et musique",
+    "question_fr": "Quel célèbre poème hongrois commence par 'Talpra magyar, hí a haza!' ?",
+    "options_fr": [
+      "Szózat",
+      "Himnusz",
+      "Nemzeti dal"
+    ],
+    "correct_answer_fr": "Nemzeti dal",
+    "explanation_fr": "Le 'Nemzeti dal' (Chant national) est un poème de Sándor Petőfi qui est devenu le symbole de la révolution du 15 mars 1848. Le poème commence par 'Talpra magyar, hí a haza!' (Debout, Hongrois, la patrie vous appelle!)."
+  },
+  {
+    "theme": "Alkotmányos intézmények",
+    "question": "Ki a magyar államfő?",
+    "options": [
+      "A miniszterelnök",
+      "A köztársasági elnök",
+      "Az országgyűlés elnöke"
+    ],
+    "correct_answer": "A köztársasági elnök",
+    "explanation": "Magyarország államfője a köztársasági elnök, akit az Országgyűlés választ öt évre.",
+    "theme_fr": "Institutions constitutionnelles",
+    "question_fr": "Qui est le chef d'État hongrois ?",
+    "options_fr": [
+      "Le Premier ministre",
+      "Le Président de la République",
+      "Le Président du Parlement"
+    ],
+    "correct_answer_fr": "Le Président de la République",
+    "explanation_fr": "Le chef d'État de la Hongrie est le Président de la République, élu par l'Assemblée nationale pour cinq ans."
+  },
+  {
+    "theme": "Alkotmányos intézmények",
+    "question": "Hány képviselő ül a magyar Országgyűlésben?",
+    "options": [
+      "199",
+      "386",
+      "120"
+    ],
+    "correct_answer": "199",
+    "explanation": "A 2011-es választási reform óta a magyar Országgyűlésben 199 képviselő ül (korábban 386 volt).",
+    "theme_fr": "Institutions constitutionnelles",
+    "question_fr": "Combien de députés siègent à l'Assemblée nationale hongroise ?",
+    "options_fr": [
+      "199",
+      "386",
+      "120"
+    ],
+    "correct_answer_fr": "199",
+    "explanation_fr": "Depuis la réforme électorale de 2011, l'Assemblée nationale hongroise compte 199 députés (contre 386 auparavant)."
+  },
+  {
+    "theme": "Alkotmányos intézmények",
+    "question": "Mi Magyarország legfőbb népképviseleti szerve?",
+    "options": [
+      "A kormány",
+      "Az Országgyűlés",
+      "A köztársasági elnöki hivatal"
+    ],
+    "correct_answer": "Az Országgyűlés",
+    "explanation": "Magyarország legfőbb népképviseleti szerve az Országgyűlés, amely a törvényhozó hatalmat gyakorolja.",
+    "theme_fr": "Institutions constitutionnelles",
+    "question_fr": "Quel est l'organe principal de représentation populaire en Hongrie ?",
+    "options_fr": [
+      "Le gouvernement",
+      "L'Assemblée nationale",
+      "Le bureau du Président de la République"
+    ],
+    "correct_answer_fr": "L'Assemblée nationale",
+    "explanation_fr": "L'organe principal de représentation populaire en Hongrie est l'Assemblée nationale, qui exerce le pouvoir législatif."
+  },
+  {
+    "theme": "Alkotmányos intézmények",
+    "question": "Ki a magyar kormány feje?",
+    "options": [
+      "A köztársasági elnök",
+      "A miniszterelnök",
+      "Az Országgyűlés elnöke"
+    ],
+    "correct_answer": "A miniszterelnök",
+    "explanation": "A magyar kormány feje a miniszterelnök, aki a végrehajtó hatalom vezetője és a kormányt irányítja.",
+    "theme_fr": "Institutions constitutionnelles",
+    "question_fr": "Qui est le chef du gouvernement hongrois ?",
+    "options_fr": [
+      "Le Président de la République",
+      "Le Premier ministre",
+      "Le Président de l'Assemblée nationale"
+    ],
+    "correct_answer_fr": "Le Premier ministre",
+    "explanation_fr": "Le chef du gouvernement hongrois est le Premier ministre, qui dirige le pouvoir exécutif et le gouvernement."
+  },
+  {
+    "theme": "Alkotmányos intézmények",
+    "question": "Melyik bíróság Magyarország legfőbb bírói szerve?",
+    "options": [
+      "Alkotmánybíróság",
+      "Kúria",
+      "Legfelsőbb Bíróság"
+    ],
+    "correct_answer": "Kúria",
+    "explanation": "Magyarország legfőbb bírói szerve a Kúria, amely a rendes bírósági rendszer csúcsán áll. Az Alkotmánybíróság külön alkotmányos intézmény.",
+    "theme_fr": "Institutions constitutionnelles",
+    "question_fr": "Quelle est la plus haute instance judiciaire de Hongrie ?",
+    "options_fr": [
+      "La Cour constitutionnelle",
+      "La Curia",
+      "La Cour suprême"
+    ],
+    "correct_answer_fr": "La Curia",
+    "explanation_fr": "La plus haute instance judiciaire de Hongrie est la Curia, qui est au sommet du système judiciaire ordinaire. La Cour constitutionnelle est une institution constitutionnelle distincte."
+  },
+  {
+    "theme": "Állampolgári jogok és kötelességek",
+    "question": "Hány éves kortól szavazhatnak a magyar állampolgárok?",
+    "options": [
+      "16",
+      "18",
+      "21"
+    ],
+    "correct_answer": "18",
+    "explanation": "A magyar állampolgárok 18 éves koruktól szavazhatnak az országgyűlési és önkormányzati választásokon, valamint népszavazásokon.",
+    "theme_fr": "Droits et devoirs des citoyens",
+    "question_fr": "À partir de quel âge les citoyens hongrois peuvent-ils voter ?",
+    "options_fr": [
+      "16",
+      "18",
+      "21"
+    ],
+    "correct_answer_fr": "18",
+    "explanation_fr": "Les citoyens hongrois peuvent voter à partir de 18 ans aux élections parlementaires et municipales, ainsi qu'aux référendums."
+  },
+  {
+    "theme": "Állampolgári jogok és kötelességek",
+    "question": "Melyik NEM tartozik az alapvető állampolgári kötelességek közé?",
+    "options": [
+      "Honvédelmi kötelezettség",
+      "Adófizetés",
+      "Párttagság"
+    ],
+    "correct_answer": "Párttagság",
+    "explanation": "A párttagság nem tartozik az alapvető állampolgári kötelességek közé, az teljesen önkéntes. Az alapvető kötelességek között van a honvédelmi kötelezettség, az adófizetés és a tankötelezettség.",
+    "theme_fr": "Droits et devoirs des citoyens",
+    "question_fr": "Lequel de ces éléments N'EST PAS un devoir fondamental des citoyens ?",
+    "options_fr": [
+      "Obligation de défense nationale",
+      "Paiement des impôts",
+      "Adhésion à un parti politique"
+    ],
+    "correct_answer_fr": "Adhésion à un parti politique",
+    "explanation_fr": "L'adhésion à un parti politique n'est pas un devoir fondamental des citoyens, c'est entièrement volontaire. Les devoirs fondamentaux comprennent l'obligation de défense nationale, le paiement des impôts et l'obligation scolaire."
+  },
+  {
+    "theme": "Állampolgári jogok és kötelességek",
+    "question": "Mi a magyar állampolgárság megszerzésének egyik módja?",
+    "options": [
+      "Születés",
+      "Munkavállalás",
+      "Turista vízum"
+    ],
+    "correct_answer": "Születés",
+    "explanation": "A magyar állampolgárság megszerzésének egyik alapvető módja a születés: magyar állampolgár gyermeke automatikusan magyar állampolgárságot kap.",
+    "theme_fr": "Droits et devoirs des citoyens",
+    "question_fr": "Quelle est l'une des façons d'acquérir la citoyenneté hongroise ?",
+    "options_fr": [
+      "Naissance",
+      "Travail",
+      "Visa touristique"
+    ],
+    "correct_answer_fr": "Naissance",
+    "explanation_fr": "L'une des façons fondamentales d'acquérir la citoyenneté hongroise est la naissance : l'enfant d'un citoyen hongrois obtient automatiquement la citoyenneté hongroise."
+  },
+  {
+    "theme": "Állampolgári jogok és kötelességek",
+    "question": "Hány éves korig tart a tankötelezettség Magyarországon?",
+    "options": [
+      "14",
+      "16",
+      "18"
+    ],
+    "correct_answer": "16",
+    "explanation": "Magyarországon a tankötelezettség 16 éves korig tart (korábban 18 éves kor volt).",
+    "theme_fr": "Droits et devoirs des citoyens",
+    "question_fr": "Jusqu'à quel âge dure l'obligation scolaire en Hongrie ?",
+    "options_fr": [
+      "14",
+      "16",
+      "18"
+    ],
+    "correct_answer_fr": "16",
+    "explanation_fr": "En Hongrie, l'obligation scolaire dure jusqu'à l'âge de 16 ans (auparavant, c'était 18 ans)."
+  },
+  {
+    "theme": "Állampolgári jogok és kötelességek",
+    "question": "Melyik alapvető jog biztosítja a szabad véleménynyilvánítást?",
+    "options": [
+      "Választójog",
+      "Szólásszabadság",
+      "Mozgásszabadság"
+    ],
+    "correct_answer": "Szólásszabadság",
+    "explanation": "A szólásszabadság (véleménynyilvánítás szabadsága) az a demokratikus alapjog, amely biztosítja, hogy az állampolgárok szabadon kifejezhetik véleményüket.",
+    "theme_fr": "Droits et devoirs des citoyens",
+    "question_fr": "Quel droit fondamental garantit la libre expression des opinions ?",
+    "options_fr": [
+      "Droit de vote",
+      "Liberté d'expression",
+      "Liberté de mouvement"
+    ],
+    "correct_answer_fr": "Liberté d'expression",
+    "explanation_fr": "La liberté d'expression est le droit démocratique fondamental qui garantit que les citoyens peuvent exprimer librement leurs opinions."
+  },
+  {
+    "theme": "Vegyes kérdések",
+    "question": "Melyik folyó folyik át Budapesten?",
+    "options": [
+      "Tisza",
+      "Duna",
+      "Rába"
+    ],
+    "correct_answer": "Duna",
+    "explanation": "Budapesten a Duna folyik keresztül, amely Magyarország leghosszabb folyója, és a fővárost Buda és Pest részekre osztja.",
+    "theme_fr": "Questions diverses",
+    "question_fr": "Quelle rivière traverse Budapest ?",
+    "options_fr": [
+      "Tisza",
+      "Danube",
+      "Rába"
+    ],
+    "correct_answer_fr": "Danube",
+    "explanation_fr": "Le Danube traverse Budapest, c'est le plus long fleuve de Hongrie et il divise la capitale en parties Buda et Pest."
+  },
+  {
+    "theme": "Vegyes kérdések",
+    "question": "Mi Magyarország hivatalos nyelve?",
+    "options": [
+      "Magyar",
+      "Angol",
+      "Német"
+    ],
+    "correct_answer": "Magyar",
+    "explanation": "Magyarország hivatalos nyelve a magyar, amely a finnugor nyelvcsaládba tartozik.",
+    "theme_fr": "Questions diverses",
+    "question_fr": "Quelle est la langue officielle de la Hongrie ?",
+    "options_fr": [
+      "Hongrois",
+      "Anglais",
+      "Allemand"
+    ],
+    "correct_answer_fr": "Hongrois",
+    "explanation_fr": "La langue officielle de la Hongrie est le hongrois, qui appartient à la famille des langues finno-ougriennes."
+  },
+  {
+    "theme": "Vegyes kérdések",
+    "question": "Melyik a legnagyobb tó Magyarországon?",
+    "options": [
+      "Velencei-tó",
+      "Balaton",
+      "Fertő tó"
+    ],
+    "correct_answer": "Balaton",
+    "explanation": "A Balaton Magyarország és egyben Közép-Európa legnagyobb tava, amelyet gyakran a 'magyar tenger'-nek is neveznek.",
+    "theme_fr": "Questions diverses",
+    "question_fr": "Quel est le plus grand lac de Hongrie ?",
+    "options_fr": [
+      "Lac Velence",
+      "Lac Balaton",
+      "Lac Fertő"
+    ],
+    "correct_answer_fr": "Lac Balaton",
+    "explanation_fr": "Le lac Balaton est le plus grand lac de Hongrie et d'Europe centrale, souvent appelé la 'mer hongroise'."
+  },
+  {
+    "theme": "Vegyes kérdések",
+    "question": "Mi Magyarország fizetőeszköze?",
+    "options": [
+      "Euró",
+      "Forint",
+      "Korona"
+    ],
+    "correct_answer": "Forint",
+    "explanation": "Magyarország hivatalos fizetőeszköze a forint (Ft vagy HUF), amely 1946 óta az ország pénzneme.",
+    "theme_fr": "Questions diverses",
+    "question_fr": "Quelle est la monnaie de la Hongrie ?",
+    "options_fr": [
+      "Euro",
+      "Forint",
+      "Couronne"
+    ],
+    "correct_answer_fr": "Forint",
+    "explanation_fr": "La monnaie officielle de la Hongrie est le forint (Ft ou HUF), qui est la monnaie du pays depuis 1946."
+  },
+  {
+    "theme": "Vegyes kérdések",
+    "question": "Melyik magyar ételt tartják nemzeti ételnek?",
+    "options": [
+      "Gulyásleves",
+      "Székelykáposzta",
+      "Töltött káposzta"
+    ],
+    "correct_answer": "Gulyásleves",
+    "explanation": "A gulyásleves a legismertebb magyar étel nemzetközi szinten, amelyet gyakran a magyar konyha szimbólumaként tartanak számon.",
+    "theme_fr": "Questions diverses",
+    "question_fr": "Quel plat hongrois est considéré comme le plat national ?",
+    "options_fr": [
+      "Goulash",
+      "Chou à la székely",
+      "Chou farci"
+    ],
+    "correct_answer_fr": "Goulash",
+    "explanation_fr": "Le goulash est le plat hongrois le plus connu internationalement, souvent considéré comme un symbole de la cuisine hongroise."
+  }
+]

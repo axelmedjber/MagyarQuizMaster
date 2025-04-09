@@ -1,0 +1,113 @@
+/* Override styles if needed to ensure dark theme compatibility */
+body {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.quiz-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.quiz-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.quiz-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.quiz-card {
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+}
+
+.quiz-card:hover {
+    transform: translateY(-5px);
+}
+
+.question-container {
+    margin-bottom: 30px;
+}
+
+.option-label {
+    display: block;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.option-label:hover {
+    background-color: var(--bs-gray-700);
+}
+
+.option-input:checked + .option-label {
+    background-color: var(--bs-primary);
+    color: white;
+}
+
+.option-input {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.result-container {
+    margin-top: 20px;
+}
+
+.answer-item {
+    margin-bottom: 25px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.correct-answer {
+    background-color: rgba(25, 135, 84, 0.2);
+    border: 1px solid var(--bs-success);
+}
+
+.wrong-answer {
+    background-color: rgba(220, 53, 69, 0.2);
+    border: 1px solid var(--bs-danger);
+}
+
+.explanation {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.score-display {
+    font-size: 1.5rem;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.progress-container {
+    margin: 30px 0;
+}
+
+.quiz-progress {
+    height: 10px;
+}
+
+/* Ensure proper spacing for container contents */
+.container {
+    max-width: 800px;
+}
+
+/* Custom animation for quiz transitions */
+.fade-in {
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

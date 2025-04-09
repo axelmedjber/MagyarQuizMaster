@@ -1,0 +1,29 @@
+{
+  "name": "magyar-quiz-app",
+  "version": "1.0.0",
+  "description": "Application mobile pour le quiz Magyar",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx cap serve",
+    "build": "echo 'Building web assets...'",
+    "sync": "npx cap sync",
+    "add:android": "npx cap add android",
+    "update:android": "npx cap copy android",
+    "open:android": "npx cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^5.5.1",
+    "@capacitor/core": "^5.5.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^5.5.1"
+  },
+  "keywords": [
+    "magyar",
+    "quiz",
+    "mobile",
+    "application"
+  ],
+  "author": "",
+  "license": "ISC"
+}

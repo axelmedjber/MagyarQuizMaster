@@ -1,0 +1,170 @@
+{% extends 'layout.html' %}
+
+{% block title %}Magyar Quiz - Préparez-vous à l'examen culturel hongrois{% endblock %}
+
+{% block content %}
+<div class="flex flex-col items-center py-6">
+    <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl font-bold text-foreground mb-2">Magyar Quiz</h1>
+        <p class="text-xl text-muted-foreground mb-6">Préparez-vous à l'examen de connaissances culturelles hongroises</p>
+        
+        {% if total_score > 0 %}
+        <div class="rounded-lg border border-border bg-card p-4 mb-6">
+            <h4 class="text-lg font-semibold text-primary mb-2">Votre score total</h4>
+            <p class="text-3xl font-bold">{{ total_score }} / {{ max_score }} points</p>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<div class="mb-8">
+    <div class="rounded-lg border border-border bg-card p-4">
+        <h4 class="flex items-center text-lg font-semibold mb-2"><i class="fas fa-info-circle mr-2 text-primary"></i>Informations</h4>
+        <p class="text-muted-foreground mb-2">Chaque quiz contient 5 questions à choix multiples en hongrois. Chaque bonne réponse vaut 2,5 points.</p>
+        <p class="mb-0">Cliquez sur un quiz ci-dessous pour commencer.</p>
+    </div>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+    <!-- Quiz 1 -->
+    <div>
+        <div class="h-full rounded-lg border border-border bg-card overflow-hidden flex flex-col">
+            <div class="p-4 flex-grow">
+                <h5 class="text-lg font-semibold mb-1">Nemzeti jelképek és ünnepek</h5>
+                <p class="font-medium text-primary mb-2">Symboles nationaux et fêtes</p>
+                <p class="text-sm text-muted-foreground">Ce quiz porte sur les symboles nationaux hongrois (drapeau, armoiries, hymne) et les principales fêtes nationales commémoratives.</p>
+                {% if "Nemzeti jelképek és ünnepek" in completed %}
+                    <p class="text-primary flex items-center mt-2">
+                        <i class="fas fa-check-circle mr-1"></i> Score: {{ scores["Nemzeti jelképek és ünnepek"] }}/12.5
+                    </p>
+                {% endif %}
+            </div>
+            <div class="p-4 border-t border-border">
+                <a href="{{ url_for('quiz', quiz_name='Nemzeti jelképek és ünnepek') }}" 
+                   class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+                    Commencer
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Quiz 2 -->
+    <div>
+        <div class="h-full rounded-lg border border-border bg-card overflow-hidden flex flex-col">
+            <div class="p-4 flex-grow">
+                <h5 class="text-lg font-semibold mb-1">Történelmi események</h5>
+                <p class="font-medium text-primary mb-2">Événements historiques majeurs</p>
+                <p class="text-sm text-muted-foreground">Questions sur les dates et événements clés de l'histoire hongroise, comme la fondation de l'État, les révolutions et le traité de Trianon.</p>
+                {% if "Történelmi események" in completed %}
+                    <p class="text-primary flex items-center mt-2">
+                        <i class="fas fa-check-circle mr-1"></i> Score: {{ scores["Történelmi események"] }}/12.5
+                    </p>
+                {% endif %}
+            </div>
+            <div class="p-4 border-t border-border">
+                <a href="{{ url_for('quiz', quiz_name='Történelmi események') }}" 
+                   class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+                    Commencer
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Quiz 3 -->
+    <div>
+        <div class="h-full rounded-lg border border-border bg-card overflow-hidden flex flex-col">
+            <div class="p-4 flex-grow">
+                <h5 class="text-lg font-semibold mb-1">Irodalom és zene</h5>
+                <p class="font-medium text-primary mb-2">Littérature et musique</p>
+                <p class="text-sm text-muted-foreground">Découvrez les grands auteurs, compositeurs et œuvres hongrois qui ont marqué la culture nationale et internationale.</p>
+                {% if "Irodalom és zene" in completed %}
+                    <p class="text-primary flex items-center mt-2">
+                        <i class="fas fa-check-circle mr-1"></i> Score: {{ scores["Irodalom és zene"] }}/12.5
+                    </p>
+                {% endif %}
+            </div>
+            <div class="p-4 border-t border-border">
+                <a href="{{ url_for('quiz', quiz_name='Irodalom és zene') }}" 
+                   class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+                    Commencer
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Quiz 4 -->
+    <div>
+        <div class="h-full rounded-lg border border-border bg-card overflow-hidden flex flex-col">
+            <div class="p-4 flex-grow">
+                <h5 class="text-lg font-semibold mb-1">Alkotmányos intézmények</h5>
+                <p class="font-medium text-primary mb-2">Institutions constitutionnelles</p>
+                <p class="text-sm text-muted-foreground">Ce quiz couvre le système politique hongrois, les fonctions des principales institutions et leur fonctionnement.</p>
+                {% if "Alkotmányos intézmények" in completed %}
+                    <p class="text-primary flex items-center mt-2">
+                        <i class="fas fa-check-circle mr-1"></i> Score: {{ scores["Alkotmányos intézmények"] }}/12.5
+                    </p>
+                {% endif %}
+            </div>
+            <div class="p-4 border-t border-border">
+                <a href="{{ url_for('quiz', quiz_name='Alkotmányos intézmények') }}" 
+                   class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+                    Commencer
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Quiz 5 -->
+    <div>
+        <div class="h-full rounded-lg border border-border bg-card overflow-hidden flex flex-col">
+            <div class="p-4 flex-grow">
+                <h5 class="text-lg font-semibold mb-1">Állampolgári jogok és kötelességek</h5>
+                <p class="font-medium text-primary mb-2">Droits et devoirs des citoyens</p>
+                <p class="text-sm text-muted-foreground">Apprenez les bases de la citoyenneté hongroise, les droits fondamentaux, obligations et modalités d'acquisition.</p>
+                {% if "Állampolgári jogok és kötelességek" in completed %}
+                    <p class="text-primary flex items-center mt-2">
+                        <i class="fas fa-check-circle mr-1"></i> Score: {{ scores["Állampolgári jogok és kötelességek"] }}/12.5
+                    </p>
+                {% endif %}
+            </div>
+            <div class="p-4 border-t border-border">
+                <a href="{{ url_for('quiz', quiz_name='Állampolgári jogok és kötelességek') }}" 
+                   class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+                    Commencer
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Quiz 6 -->
+    <div>
+        <div class="h-full rounded-lg border border-border bg-card overflow-hidden flex flex-col">
+            <div class="p-4 flex-grow">
+                <h5 class="text-lg font-semibold mb-1">Vegyes kérdések</h5>
+                <p class="font-medium text-primary mb-2">Questions diverses</p>
+                <p class="text-sm text-muted-foreground">Un mélange de questions sur la géographie, la culture populaire et les spécificités hongroises comme la gastronomie.</p>
+                {% if "Vegyes kérdések" in completed %}
+                    <p class="text-primary flex items-center mt-2">
+                        <i class="fas fa-check-circle mr-1"></i> Score: {{ scores["Vegyes kérdések"] }}/12.5
+                    </p>
+                {% endif %}
+            </div>
+            <div class="p-4 border-t border-border">
+                <a href="{{ url_for('quiz', quiz_name='Vegyes kérdések') }}" 
+                   class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+                    Commencer
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if 'scores' in session and scores.values()|select|sum > 0 %}
+<div class="flex justify-center mt-6">
+    <a href="{{ url_for('reset_scores') }}" 
+       class="inline-flex items-center justify-center rounded-md text-sm font-medium bg-destructive text-destructive-foreground hover:bg-destructive/90 h-10 px-4 py-2">
+        <i class="fas fa-redo-alt mr-1"></i> Réinitialiser tous les scores
+    </a>
+</div>
+{% endif %}
+{% endblock %}

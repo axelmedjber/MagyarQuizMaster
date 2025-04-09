@@ -1,0 +1,15 @@
+{
+  "appId": "com.magyarquiz.app",
+  "appName": "Magyar Quiz",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "server": {
+    "url": "https://magyar-quiz.replit.app",
+    "cleartext": true
+  },
+  "android": {
+    "allowMixedContent": true,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": true
+  }
+}
