@@ -1,4 +1,4 @@
-# Magyar Quiz
+# MagyarQuizMaster
 
 Une application web interactive conçue pour aider les utilisateurs à se préparer à l'examen de connaissances culturelles hongroises (Magyar Kulturális Ismereti Vizsga).
 
@@ -34,6 +34,13 @@ Pour les instructions détaillées, consultez le [README de la version Android](
 3. Répondez aux questions dans le temps imparti
 4. Consultez vos résultats détaillés à la fin du quiz
 
+## Déploiement
+
+Le projet peut être déployé:
+- Sur Replit (version actuelle)
+- Sur Hostinger (voir le fichier MISE_EN_LIGNE_RAPIDE.md)
+- Comme application Android (voir le dossier android-app)
+
 ## Notes techniques
 
 - Application web construite avec Flask (Python)
@@ -41,4 +48,4 @@ Pour les instructions détaillées, consultez le [README de la version Android](
 - Interface utilisateur inspirée de Shadcn UI avec Tailwind CSS
 - Version mobile créée avec Capacitor pour encapsuler l'application web
 
-© 2025 Magyar Quiz
+© 2025 MagyarQuizMaster
