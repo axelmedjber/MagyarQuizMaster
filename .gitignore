@@ -53,8 +53,4 @@ android-app/android/.gradle/
 # Fichiers d'environnement
 .env
 .env.local
-
-# Fichiers spécifiques à Replit
-.replit
-replit.nix
 .config/
